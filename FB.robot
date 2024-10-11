@@ -9,14 +9,17 @@ Library    String
 Facebook register 
     Open Browser    http://www.facebook.com/r.php    Chrome 
     ...    options=add_argument("disable-search-engine-choice-screen"); add_experimental_option("detach", True)
-
+    
+    # Wait for 2 seconds to let the page load
     Sleep    2
 
-
+    # Maximize the browser window for better visibility
     Maximize Browser Window
 
+    # Close the popup if it appears (xpath used to target the element)
     Click Element    xpath:/html/body/div[3]/div[2]/div/div/div/div/div[3]/div[2]/div/div[2]/div[1]/div
 
+    # Verify that the page contains the text "Create a new account"
     Page Should Contain    Create a new account
 
     Click Element    name:firstname
