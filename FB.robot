@@ -27,27 +27,19 @@ Facebook register
 
     Sleep    1
 
-
-    #Fill in the last name field with "Duck"
     Click Element    name:lastname
     Input Text    name:lastname    Duck
 
-    #Pause for 1 second before moving to the next input
+
     Sleep    1s
 
-    #Fill in the email field with "d.d@d.com"
     Click Element    name:reg_email__
     Input Text    name:reg_email__    d.d@d.com
 
-
-
-    #Fill in the password field with "verySecretPasswd"
     Click Element    name:reg_passwd__
     Input Text    name:reg_passwd__    verySecretPasswd
 
 
-
-    #Select the month of birth (June) from the dropdown
     Click Element    id:month
     Select From List By Label    id:month    Jun
 
